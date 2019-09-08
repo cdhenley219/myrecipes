@@ -2,8 +2,79 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $light-yellow:  #FFFFE0;
+$gray-twenty: #555555;
+
 
 body {
     background: $light-yellow;
     font-family: 'Source Sans Pro', sans-serif;
+    
+ }
+
+ .btn-primary {
+    color: white;
+    background: $gray-twenty;
+    border: $gray-twenty;
+
+    &:hover, &:visited &:link, &:active {
+        background: $gray-twenty;
+        border: $gray-twenty;
+    }
+ }
+
+ 
+
+ header {
+    text-align: center;
+    background: no-repeat center/100% image-url('recipe_image.jpg');
+    width: 100%;
+    color: white;
+
+    h1 {
+        font-weight: 700
+    }
+
+    .nav {
+        align-items: center;
+        justify-content: center;
+        .nav-link {
+            color: white;
+            &:hover {
+                background: $gray-twenty;
+            }
+        }
+    }
+ }
+
+ .recipe, .recipe-list {
+     padding: 20px;
+ }
+
+.recipe {
+    form {
+        textarea {
+            resize: none;
+        }
+
+        input[id*=minutes] {
+            width: 65px;
+            display: inline-block;
+        }
+
+        label {
+            font-weight: 700;
+        }
+
+        label[for='recipe_recipe_image'] {
+            display: block;
+        }
+    }
+}
+
+ footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px;
+    text-align: right;
  }

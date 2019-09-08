@@ -1,5 +1,14 @@
-<h1>New Recipe</h1>
+<%= render 'header'%>
 
-<%= render 'form', recipe: @recipe %>
 
-<%= link_to 'Back', recipes_path %>
+<section class="recipe">
+    <h2>Add New Recipe</h2>
+    <%= render 'form', recipe: @recipe %>
+</section>
+<!--<h1>New Recipe</h1>
+
+
+
+<%= link_to 'Back', recipes_path %>-->
+
+<%= render 'footer'%>
