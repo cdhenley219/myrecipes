@@ -1,9 +1,5 @@
 <header>
   <h1>Build My Cookbook</h1>
   <!--<h2>Create, and select recipes for your own online, customized cookbook</h2>-->
-  
-  <nav class='nav'>
-    <%= link_to 'Show All Recipes', recipes_path, class: 'nav-link' %>
-    <%= link_to 'New Recipe', new_recipe_path, class: 'nav-link' %>
-  </nav>
+  <%=render 'nav'%>
 </header>
