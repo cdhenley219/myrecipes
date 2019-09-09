@@ -4,9 +4,11 @@
 $light-yellow:  #FFFFE0;
 $gray-twenty: #555555;
 
+html, body {
+    height: 100%;
+}
 
 body {
-    background: $light-yellow;
     font-family: 'Source Sans Pro', sans-serif;
     
  }
@@ -48,7 +50,27 @@ body {
 
 section {
      padding: 20px;
+     height: 100%;
  }
+
+
+.login {
+    background: image-url('recipe_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    .jumbotron {
+        .display-4 {
+            font-weight: 700;
+        }
+        color: white;
+        background: transparent;
+    }
+}
+
+.recipe, .recipe-list, .user {
+    background: $light-yellow;
+}
+
 
 .recipe {
     form {
