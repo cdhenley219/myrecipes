@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index, :show, :destroy] 
 
-  get 'login', to: 'users#login'
+  #resources :logins, only: [:create, :new, :destroy]
+
+  #get 'logout', to: 'logins#destroy'
+
 
   root 'recipes#index'
 

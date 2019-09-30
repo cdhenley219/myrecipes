@@ -24,13 +24,13 @@ body {
     }
  }
 
- 
 
  header {
     text-align: center;
     background: no-repeat center/100% image-url('recipe_image.jpg');
     width: 100%;
     color: white;
+    height: 96px;
 
     h1 {
         font-weight: 700
@@ -49,9 +49,25 @@ body {
  }
 
 section {
-     padding: 20px;
+     padding: 25px;
      height: 100%;
+
+     form {
+        textarea {
+            resize: none;
+        }
+    
+        label {
+            font-weight: 700;
+        }
+    
+        .field_with_errors {
+            display: block;
+        }
+    }
  }
+
+
 
 
 .login {
@@ -74,17 +90,9 @@ section {
 
 .recipe {
     form {
-        textarea {
-            resize: none;
-        }
-
         input[id*=minutes] {
             width: 65px;
             display: inline-block;
-        }
-
-        label {
-            font-weight: 700;
         }
 
         label[for='recipe_recipe_image'] {
