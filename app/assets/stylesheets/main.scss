@@ -17,6 +17,7 @@ body {
     color: white;
     background: $gray-twenty;
     border: $gray-twenty;
+    padding: 6px 20px;
 
     &:hover, &:visited &:link, &:active {
         background: $gray-twenty;
