@@ -1,0 +1,26 @@
+<section class="login">
+    <div class="jumbotron">
+        <h1 class="display-4">Build Your Own Cookbook</h1>
+        <p class="lead">An app that allows you to create an index of recipes</p>
+    </div>
+
+    <%= form_for :login do |form| %>
+    <!-- Email -->
+    <div class="form-group">
+        <%=form.label :email, 'Email'  %>
+        <%=form.email_field :email, class:'form-control' %>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+        <%= form.label :password %>
+        <%= form.password_field :password, class:'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= form.submit 'Login', class:'btn btn-primary login-btn'%>
+     </div>
+
+    <% end %>
+
+
+</section>

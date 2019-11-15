@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index, :show] 
 
-  #resources :logins, only: [:create, :new, :destroy]
-
-  #get 'logout', to: 'logins#destroy'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 
   root 'recipes#index'
 

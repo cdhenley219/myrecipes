@@ -7,13 +7,18 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         @user.email.downcase!
 
-        if @user.save
-            flash[:notice] = "Account created successfully!"
-            redirect_to root_url
-        else
-            flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
+        if User.find_by(email: @user.email)
+            flash.now.alert = "Account already exists with email."
             render :new
-        end   
+        else 
+            if @user.save
+                flash[:notice] = "Account created successfully!"
+                redirect_to root_url
+            else
+                flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
+                render :new
+            end  
+        end  
     end
 
     def edit
